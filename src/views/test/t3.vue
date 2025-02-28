@@ -5,9 +5,6 @@ const { proxy } = getCurrentInstance()
 
 <template>
   <div>
-    <!-- <g-base></g-base> -->
-    <!-- <g-init></g-init> -->
-    <g-7nodes></g-7nodes>
-     <!-- <g-add-node></g-add-node> -->
+    <div>test/t3.vue</div>
   </div>
 </template>
