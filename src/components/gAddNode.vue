@@ -43,10 +43,8 @@ const addAi = () => {
 }
 
 const addNode = (shapeItem) => {
-  console.log(`75 shapeItem`, shapeItem)
   lf.value.clearSelectElements()
-  const { virtualRectCenterPositionX, virtualRectCenterPositionY } =
-    lf.value.graphModel.getVirtualRectSize()
+  const { virtualRectCenterPositionX, virtualRectCenterPositionY } = lf.value.graphModel.getVirtualRectSize()
   const newNode = lf.value.graphModel.addNode({
     type: shapeItem.type,
     properties: shapeItem.properties,
@@ -63,6 +61,6 @@ const addNode = (shapeItem) => {
 <style scoped>
 .container {
   width: 100%;
-  height: calc(100vh);
+  height: calc(80vh);
 }
 </style>
