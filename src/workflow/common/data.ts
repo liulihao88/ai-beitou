@@ -1,4 +1,23 @@
-import { WorkflowType } from '@/enum/workflow'
+import { WorkflowType } from '@/enums/workflow'
+import { t } from '@/locales'
+
+export const customNode = {
+  type: 'custom-test',
+  text: '自定义测试组件',
+  label: '自定义测试',
+  height: 340,
+  properties: {
+    stepName: '自定义测试',
+    config: {
+      fields: [
+        {
+          label: '自定义测试内容',
+          value: 'answer',
+        },
+      ],
+    },
+  },
+}
 
 export const startNode = {
   id: WorkflowType.Start,
@@ -39,11 +58,12 @@ export const baseNode = {
       name: '',
       desc: '',
       // @ts-ignore
-      prologue: 'views.application.prompt.defaultPrologue',
+      prologue: t('views.application.prompt.defaultPrologue'),
     },
     config: {},
   },
 }
+
 /**
  * 说明
  * type 与 nodes 文件对应
@@ -285,6 +305,7 @@ export const textToSpeechNode = {
   },
 }
 export const menuNodes = [
+  customNode,
   aiChatNode,
   imageUnderstandNode,
   imageGenerateNode,
@@ -373,6 +394,7 @@ export const compareList = [
 ]
 
 export const nodeDict: any = {
+  'custom-test': customNode,
   [WorkflowType.AiChat]: aiChatNode,
   [WorkflowType.SearchDataset]: searchDatasetNode,
   [WorkflowType.Question]: questionNode,
