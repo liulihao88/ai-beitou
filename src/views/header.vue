@@ -2,9 +2,9 @@
 import { ref, getCurrentInstance } from 'vue'
 import DropdownMenu from '@/views/DropdownMenu.vue'
 
-import { useRouter, useRoute } from 'vue-router';
-const router = useRouter();
-const route = useRoute();
+import { useRouter, useRoute } from 'vue-router'
+const router = useRouter()
+const route = useRoute()
 const { proxy } = getCurrentInstance()
 const showPopover = ref(false)
 const {
@@ -23,13 +23,13 @@ function onmousedown(item: any) {
   // workflowRef.value?.onmousedown(item)
   showPopover.value = false
 }
-
 </script>
 
 <template>
   <div class="header-box">
     <div>左侧</div>
     <div>
+      <el-button type="primary" @click="showPopover = !showPopover">添加测试组件</el-button>
       <el-button type="primary" @click="showPopover = !showPopover">添加组件</el-button>
       <el-button type="primary" @click="save">保存</el-button>
     </div>
