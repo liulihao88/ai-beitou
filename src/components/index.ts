@@ -1,5 +1,4 @@
 import { type App } from 'vue'
-import CustimeTest from './custom-test/index.vue'
 import AppIcon from './icons/AppIcon.vue'
 import AppAvatar from './app-avatar/index.vue'
 import LoginLayout from './login-layout/index.vue'
@@ -28,7 +27,6 @@ import CodemirrorEditor from './codemirror-editor/index.vue'
 
 export default {
   install(app: App) {
-    app.component(CustimeTest.name, CustimeTest)
     app.component(AppIcon.name, AppIcon)
     app.component(AppAvatar.name, AppAvatar)
     app.component(LoginLayout.name, LoginLayout)
