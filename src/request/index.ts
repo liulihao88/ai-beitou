@@ -24,9 +24,7 @@ instance.interceptors.request.use(
       config.headers = {}
     }
     const { user } = useStore()
-    // const token = user.getToken()
-    const token =
-      'eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiJmMGRkOGY3MS1lNGVlLTExZWUtOGM4NC1hOGExNTk1ODAxYWIiLCJlbWFpbCI6IiIsInR5cGUiOiJVU0VSIn0:1trYRe:cSd5mJwsqz-pmv0wepLUcToab8Aj0U3aBsxSNBBa9nw'
+    const token = user.getToken()
     if (token) {
       config.headers['AUTHORIZATION'] = `${token}`
     }
