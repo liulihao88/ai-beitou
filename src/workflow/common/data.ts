@@ -1,23 +1,7 @@
 import { WorkflowType } from '@/enums/workflow'
 import { t } from '@/locales'
 
-export const customNode = {
-  type: 'custom-test',
-  text: '自定义测试组件',
-  label: '自定义测试',
-  height: 340,
-  properties: {
-    stepName: '自定义测试',
-    config: {
-      fields: [
-        {
-          label: '自定义测试内容',
-          value: 'answer',
-        },
-      ],
-    },
-  },
-}
+import { customNode, customLib } from './customData'
 
 export const startNode = {
   id: WorkflowType.Start,
@@ -305,6 +289,7 @@ export const textToSpeechNode = {
   },
 }
 export const menuNodes = [
+  customLib,
   customNode,
   aiChatNode,
   imageUnderstandNode,
@@ -394,6 +379,7 @@ export const compareList = [
 ]
 
 export const nodeDict: any = {
+  'custom-lib': customLib,
   'custom-test': customNode,
   [WorkflowType.AiChat]: aiChatNode,
   [WorkflowType.SearchDataset]: searchDatasetNode,
